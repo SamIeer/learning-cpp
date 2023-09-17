@@ -1,1 +1,3 @@
- cout<<i;
+else if(ops=='^'){
+    //     return a^b;
+    // }

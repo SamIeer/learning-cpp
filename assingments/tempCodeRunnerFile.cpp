@@ -1,3 +1,1 @@
-else if(ops=='^'){
-    //     return a^b;
-    // }
+ // int arr[n];

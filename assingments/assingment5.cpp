@@ -1,87 +1,88 @@
 // ANSWER 1; PROGRAM FOR TRAIN DATA BASE
-    // #include <iostream>
-    // using namespace std;
-    // struct Railway         //structure for the train list
-    // {
-    //     string Name;
-    //     string info;
-    //     int Tno;
-    //     int seat;
-    //     int price;
-    // };
+    #include <iostream>
+    using namespace std;
+    struct Railway         //structure for the train list
+    {
+        string Name;
+        string info;
+        int Tno;
+        int seat;
+        int price;
+    };
 
-    // int balance_check(int n,int *arr,int *arrr); //FUNCTION FOR OBTAINING TOTAL MONEY AND LEFT OUT SEATS
+    int balance_check(int n,int *arr,int *arrr); //FUNCTION FOR OBTAINING TOTAL MONEY AND LEFT OUT SEATS
 
-    // int main(){
-    //     int n;
-    //     cout<<"enter the number of passengers :"<<endl;
-    //     cin>>n;
-    //     Railway chart[n];
-    //     int arr[n];
-    //     int arrr[n];
-    //     cout<<"Name"<<"\t"<<"info"<<"\t"<<"Tno"<<"\t"<<"seat"<<"\t"<<"price";
-    //     for (int i = 0; i < n; i++){
-    //         cin>>chart[i].Name>>chart[i].info>>chart[i].Tno>>chart[i].seat>>chart[i].price;
-    //     }
-    //     cout<<"Name"<<"\t"<<"info"<<"\t"<<"Tno"<<"\t"<<"seat"<<"\t"<<"price"<<endl;
-    //     for (int i = 0; i < n; i++){
-    //         cout<<chart[i].Name<<"\t"<<chart[i].info<<"\t"<<chart[i].Tno<<"\t"<<chart[i].seat<<"\t"<<chart[i].price<<endl;
-    //         arr[i]=chart[i].price;
-    //         arrr[i]=chart[i].Tno;
-    //         }
-    //     cout<<balance_check(n,arr,arrr);
-    //     return 0;
-    // }
+    int main(){
+        int n;
+        cout<<"enter the number of passengers :"<<endl;
+        cin>>n;
+        Railway chart[n];
+        int arr[n];
+        int arrr[n];
+        cout<<"Name"<<"\t"<<"info"<<"\t"<<"Tno"<<"\t"<<"seat"<<"\t"<<"price";
+        for (int i = 0; i < n; i++){
+            cin>>chart[i].Name>>chart[i].info>>chart[i].Tno>>chart[i].seat>>chart[i].price;
+        }
+        cout<<"Name"<<"\t"<<"info"<<"\t"<<"Tno"<<"\t"<<"seat"<<"\t"<<"price"<<endl;
+        for (int i = 0; i < n; i++){
+            cout<<chart[i].Name<<"\t"<<chart[i].info<<"\t"<<chart[i].Tno<<"\t"<<chart[i].seat<<"\t"<<chart[i].price<<endl;
+            arr[i]=chart[i].price;
+            arrr[i]=chart[i].Tno;
+            }
+        cout<<balance_check(n,arr,arrr);
+        return 0;
+    }
 
-    // int balance_check(int n,int *arr,int *arrr){
-    //     int sum=0;
-    //     int c=0,t=9;
-    //     for (int i = 0; i < n; i++)
-    //     {
-    //     sum+=arr[i];
-    //     if(arrr[i]!=0){
-    //         c+=1;
-    //     }
-    //     }
-    //     int l=t-c;
-    //     cout<<"total price :"<<endl;
-    //     return sum;
-    //     cout<<"total seats booked :"<<endl;
-    //     return l;
-    // }
+    int balance_check(int n,int *arr,int *arrr){
+        int sum=0;
+        int c=0,t=9;
+        for (int i = 0; i < n; i++)
+        {
+        sum+=arr[i];
+        if(arrr[i]!=0){
+            c+=1;
+        }
+        }
+        int l=t-c;
+        cout<<"total price :"<<endl;
+        return sum;
+        cout<<"total seats booked :"<<endl;
+        return l;
+    }
+
 
 
 //ANSWER 2: REVERSING S NUMBER WITH THE USE OF CLASS
-    // #include <iostream>
-    // using namespace std;
+    #include <iostream>
+    using namespace std;
 
-    // // CLASS FOR REVERSING A GIVEN NUMBER
-    // class Reverse{          
-    //     public:
-    //     int a;
-    //     //   int n;
-    //     void revese_no(){
+    // CLASS FOR REVERSING A GIVEN NUMBER
+    class Reverse{          
+        public:
+        int a;
+        //   int n;
+        void revese_no(){
 
-    //         int Rev=0;
-    //         int originalnum=a;
-    //         // cout<<"REVERSE OF THE GIVEN NUMBER :";
-    //         while (originalnum != 0)
-    //         {
-    //             int digit=originalnum%10; //getting last digit
-    //             Rev=Rev*10+digit;         //append the digit to reverse number
-    //             originalnum/=10;          //remove the last digit from the original number
-    //         }
-    //         cout<<"the reversed number :"<<Rev;
-    //     }
-    // };
+            int Rev=0;
+            int originalnum=a;
+            // cout<<"REVERSE OF THE GIVEN NUMBER :";
+            while (originalnum != 0)
+            {
+                int digit=originalnum%10; //getting last digit
+                Rev=Rev*10+digit;         //append the digit to reverse number
+                originalnum/=10;          //remove the last digit from the original number
+            }
+            cout<<"the reversed number :"<<Rev;
+        }
+    };
 
-    // int main(){
-    //     Reverse num;      //INSTANCE OF CLASS REVERSE
-    //     cout<<"enter a number :"<<endl;
-    //     cin>>num.a;      //ATTRIBUTE OF  CLASS REVERSE (VARIABLE)
-    //     num.revese_no(); //METHOD OF  CLASS REVERSE (FUNCTION)
-    //     return 0;
-    // }
+    int main(){
+        Reverse num;      //INSTANCE OF CLASS REVERSE
+        cout<<"enter a number :"<<endl;
+        cin>>num.a;      //ATTRIBUTE OF  CLASS REVERSE (VARIABLE)
+        num.revese_no(); //METHOD OF  CLASS REVERSE (FUNCTION)
+        return 0;
+    }
 
 
 
@@ -111,6 +112,50 @@
         num.factorial_no();          //METHOD OF  CLASS REVERSE (FUNCTION)
         return 0;
     }
+
+
+
+// ASSINGMENT IN THE RECORDIND
+//FORRM A CLASS OF EMPLOYEES THEIR PHNO,NAME ID,POST;
+#include <iostream>
+using namespace std;
+
+class Employee
+{
+private:
+    /* data */
+    string name;
+    string Phone_number;
+    string Id;
+    string post;
+    int salary;
+public:
+    void set_data(string n,string p,string i,string po,int s){
+           name=n;
+           Phone_number=p;
+           Id=i;
+           post=po;
+           salary=s;
+    }
+
+    void show_data(){
+        cout<<"Name"<<"\t"<<"Phone number"<<"\t"<<"Id"<<"\t"<<"post"<<"\t"<<"salary"<<endl;
+        cout<<name<<"\t"<<Phone_number<<"\t"<<Id<<"\t"<<post<<"\t"<<salary<<endl;
+    }
+};
+
+int main(){
+    Employee a,b,c;
+    a.set_data("sameer","21354698","AW12","web devp",340000);
+    b.set_data("kamal","78452618","AW20","python developer",500000);
+    c.set_data("suuyi","3434526345","Ay20","web designer",560000);
+    a.show_data();
+    b.show_data();
+    c.show_data();
+
+    return 0;
+}
+
 
 
 

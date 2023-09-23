@@ -2,68 +2,68 @@
 // Function overloading is a feature in C++ that allows you to define multiple functions in the 
 // same scope with the same name but different parameters.
 
-    // #include <iostream>
-    // using namespace std;
-    // int find_greatest(int a ,int b);
-    // float find_greatest(float a ,float b);
+    #include <iostream>
+    using namespace std;
+    int find_greatest(int a ,int b);
+    float find_greatest(float a ,float b);
 
-    // int main(){
-    //  int a=4,b=23;
-    //  int x=3.4 , y=6.8;
-    //  cout<<find_greatest(a,b);
-    //  cout<<find_greatest(x,y);
-    // }
-    // int find_greatest(int a ,int b){
-    //     if (a>b){
-    //         return a;
-    //     }
-    //     else{
-    //         return b;
-    //     }
-    // }
+    int main(){
+     int a=4,b=23;
+     int x=3.4 , y=6.8;
+     cout<<find_greatest(a,b);
+     cout<<find_greatest(x,y);
+    }
+    int find_greatest(int a ,int b){
+        if (a>b){
+            return a;
+        }
+        else{
+            return b;
+        }
+    }
 
-    // float find_greatest(float a ,float b){
-    //     if (a>b){
-    //         return a;
-    //     }
-    //     else{
-    //         return b;
-    //     }
-    // }
+    float find_greatest(float a ,float b){
+        if (a>b){
+            return a;
+        }
+        else{
+            return b;
+        }
+    }
 
-// function oveloading in class
-    // #include <iostream>
-    // using namespace std;
+function oveloading in class
+    #include <iostream>
+    using namespace std;
 
-    // class Complex_numbers{
-    //     private:
-    //     int real;
-    //     int imag;
-    //     public:
-    //     Complex_numbers(void){
-    //         real=0;
-    //         imag=0;
-    //     }
-    //     Complex_numbers(int x,int y){
-    //         real=x;
-    //         imag=y;}
-    //     Complex_numbers(Complex_numbers & z){
-    //         real=z.real;
-    //         imag=z.imag;
-    //     }
-    //     void display(void);
-    // };
-    // void Complex_numbers:: display(void){
-    //     cout<<real<<"+"<<imag<<"i"<<endl;}
+    class Complex_numbers{
+        private:
+        int real;
+        int imag;
+        public:
+        Complex_numbers(void){
+            real=0;
+            imag=0;
+        }
+        Complex_numbers(int x,int y){
+            real=x;
+            imag=y;}
+        Complex_numbers(Complex_numbers & z){
+            real=z.real;
+            imag=z.imag;
+        }
+        void display(void);
+    };
+    void Complex_numbers:: display(void){
+        cout<<real<<"+"<<imag<<"i"<<endl;}
 
-    // int main(){
-    //     Complex_numbers a;
-    //     a.display();
-    //     Complex_numbers b(4,5);
-    //     b.display();
-    //     Complex_numbers c(b);
-    //     c.display();
-// }
+    int main(){
+        Complex_numbers a;
+        a.display();
+        Complex_numbers b(4,5);
+        b.display();
+        Complex_numbers c(b);
+        c.display();
+}
 
 // PRACTICE QUESTION
 // Write a C++ code snippet to demonstrate the creation of Shape objects representing a circle and a rectangle.

@@ -102,7 +102,7 @@ int main() {
     cout << "Enter the shape (circle/rectangle): ";
     cin >> shapeName;
     
-    ShapeType type;
+    Shape::ShapeType type;
     if (shapeName == "circle") {
         type = circle;
     } else if (shapeName == "rectangle") {

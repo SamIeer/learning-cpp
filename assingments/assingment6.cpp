@@ -97,7 +97,7 @@
         return z;}
 
 
-//ANSWER2: PROGRAM FOR DEMONSTRATING OPERATOR OVERLOADING IN CLASS
+// ANSWER2: PROGRAM FOR DEMONSTRATING OPERATOR OVERLOADING IN CLASS
     #include <iostream>
     using namespace std;
     class Fraction{
@@ -194,3 +194,75 @@
             return false;
         }
     }
+
+    // ASSINGMENT IN THE RECORDIND
+//FORRM A CLASS OF EMPLOYEES THEIR PHNO,NAME ID,POST;
+#include <iostream>
+using namespace std;
+
+class Employee
+{
+private:
+    /* data */
+    string name;
+    string Phone_number;
+    string Id;
+    string post;
+    int salary;
+public:
+    void set_data(string n,string p,string i,string po,int s){
+           name=n;
+           Phone_number=p;
+           Id=i;
+           post=po;
+           salary=s;}
+
+    
+    friend ostream & operator << (ostream &out, Employee &c);
+    friend istream & operator >> (istream &in, Employee &c);
+    void operator = (Employee&);  //MEMBER FUNCTION
+
+};
+
+int main(){
+    Employee a,b,c;
+    cin>>a;
+    cout<<a;
+
+    return 0;
+}
+
+ostream & operator << (ostream &out,Employee &c){
+    out <<"---EMPLOYEE RECORD---"<<endl;
+    out <<"NAME:"<<c.name<<endl;
+    out <<"IDENTITY:"<<c.Id<<endl;
+    out<<"PHONE NO:"<<c.Phone_number<<endl;
+    out<<"SALARY:"<<c.salary<<endl;
+
+    return out;
+}
+
+istream & operator >> (istream &in, Employee &c){
+   cout<<"Enter the name of employee"<<endl;
+   in >> c.name;
+   cout<<"Enter Id of employee"<<endl;
+   in >> c.Id;
+   cout<<"Enter phone no. of employee"<<endl;
+   in>>c.Phone_number;
+   cout<<"Enter job post of the employee"<<endl;
+   in>>c.post;
+   cout<<"Enter the salary of the employee";
+   in>>c.salary;
+   return in;
+}
+
+//FOR COPYING
+void Employee::operator=(Employee& b){
+    // we get objest b
+    // let's say we want to do a=b (where a is the object that called the operator)
+    name=b.name;
+    Id=b.Id;
+    Phone_number=b.Phone_number;
+    post=b.post;
+    salary=b.salary;}
+

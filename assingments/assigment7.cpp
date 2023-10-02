@@ -1,6 +1,7 @@
-// ANSWER 1:DESTRUCTURE 
 #include <iostream>
 using namespace std;
+
+// ANSWER 1:DESTRUCTURE 
 class Derived{
     private:
      int x,y;
@@ -15,8 +16,7 @@ class Derived{
         return(x>y)?x:y;
     }
     ~Derived(){
-        cout<<"This is a destructure class"<<endl;
-    }
+        cout<<"This is a destructure class"<<endl;}
 };
 class Base:public Derived{
       private:
@@ -25,12 +25,11 @@ class Base:public Derived{
       public:
         Base(){
         name="";surname="";
-        cout<<"hello Base"<<endl;
-       }
+        cout<<"hello Base"<<endl;}
+
        Base(string n,string sn){
         name=n;surname=sn;
-        cout<<"this a Base class"<<endl;
-       }
+        cout<<"this a Base class"<<endl;}
 
        string fullname(){
         return name + " " + surname;
@@ -57,39 +56,78 @@ int main(){
 // }
 
 // PROGRAM TO CALCULATE AREA OF RECTANGLE AND TRIANLE USING ABSTRACT CLASS
-#include <iostream>
-using namespace std;
 
 class Shape {
-protected:
-    int length;
-    int height;
-
 public:
     // Parameterized constructor
-    Shape(int l, int h) {
-        length = l;
-        height = h;
-    }
+    virtual void calculatedarea()=0;
 };
-
 class Rectangle : public Shape {
    private:
-    int area;
+    int length;
+    int height;
    public:
     //Parameterized constructor using member initializer list
-    Rectangle(int l, int h) : Shape(l, h) {
-        area = length * height;}
+    Rectangle(int l, int h) {
+         length=l;height=h;}
 
     // Public function to get the area
-    void Area() {
-        cout << "The area of Rectangle is: " << area << endl;
+    void calculatedarea() {
+        cout << "The area of Rectangle is: " << length*height << endl;
     }
 };
-
+class Triangle : public Shape{
+        private:
+          int base;
+          int height;
+        public:
+         Triangle(int b,int h){
+            base=b;height=h;
+         }
+         void calculatedarea(){
+            cout<<"area of triangle:"<<0.5*base*height<<endl;
+         }  
+};
 int main() {
-    Rectangle r(4, 5);
-    r.Area();
+    //OBJECT FOR RECTANGLE
+    Rectangle r(10,4);
+    r.calculatedarea();
+    //OBJECT FOR TRIANGLE
+    Triangle t(90,2);
+    t.calculatedarea();
+    return 0;
+}
 
+
+// RECOEDED QUESTION
+class Collegestudent{
+       private:
+         string name;
+         int roll_no;
+         int age;
+         string department;
+         static int total;
+        public:
+          Collegestudent(){
+            name="";age=0;roll_no=0;department="";total++;
+          }
+          Collegestudent(string n,int a ,string d){
+            name=n;age=a;department=d;total++;
+          }
+
+          ~Collegestudent(){
+            total--;
+          }
+          void printdata(){
+            cout<<"STUNDENT RECORD--------"<<endl;
+            cout<<"name :"<<name<<"\t"<<"age :"<<age<<"\t"<<"roll_no :"<<roll_no<<"\t"<<"department :"<<department<<endl;
+          }
+};
+int Collegestudent :: total = 0;
+int main(){
+    Collegestudent c("ram",3,"cse");
+    c.printdata();
+
+    c.~Collegestudent();
     return 0;
 }

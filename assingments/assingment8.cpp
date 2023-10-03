@@ -1,3 +1,6 @@
+// ERROR HANDLING:::: PREVENTING OR RECOVERING FROM ERRORS THAT CAN OCCUR DURING THE EXECUTION OF A PROGRAM 
+//AND IT ALSO INVOLVES DESIGNING APPROPRIATE ERROR HANDLING STRATEGIES TO BE USED BY YOUR CODE.
+//  to ensure that a program behaves ROBUSTLY and GRACEFULLY in the face of unexpected conditions.
 #include <iostream>
 #include <math.h>
 using namespace std;

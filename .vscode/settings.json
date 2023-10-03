@@ -10,7 +10,8 @@
     "tuple": "cpp",
     "type_traits": "cpp",
     "utility": "cpp",
-    "iosfwd": "cpp"
+    "iosfwd": "cpp",
+    "cmath": "cpp"
   },
   "C_Cpp_Runner.cCompilerPath": "gcc",
   "C_Cpp_Runner.cppCompilerPath": "g++",

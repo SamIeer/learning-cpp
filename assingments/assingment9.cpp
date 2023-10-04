@@ -1,37 +1,7 @@
-//
 #include <iostream>
-#include <fstream>
 using namespace std;
 
-// FOR INSERITNG DATA INTO THE FILE
-// int main(){
-//     ofstream my_file;
-//     my_file.open("output.txt",ios::app);
-//     my_file<<"hello file"<<endl;
-//     int n;
-//     cin>>n;
-//     for(int i=0;i<n;i++){
-//         my_file<<i*i<<endl;
-//     }
-//     my_file.close();
-//     return 0;
-// }
-
-// FOR READING FROM A FILE
-// int main(){
-//     ifstream my_file;
-//     my_file.open("output.txt");
-//     int a;
-//     while(!my_file.eof()){
-//         my_file>>a;
-//         cout<<a;
-//     }
-//     cout<<"heleeo";
-//     my_file.close();
-//     return 0;
-// }
-
-// STUDENT DETAILS
+// ANSWER1:PROGRAM TO STORE A STUDENTS DETAILS IN THE FILE
 class Student{
       private:
         string name;
@@ -65,3 +35,12 @@ int main(){
     return 0;
 }
 
+// ANSWER2:PROGRAM TO READ CONTENT FROM THE FILE AND PRINT IT
+int main(){
+    ifstream inFile;
+    infile.open("output.txt");
+    while(!inFile.eof()){
+        
+
+    }
+}

@@ -1,0 +1,7 @@
+smaeer	1	90	
+mohit	2	56	
+happy	3	90	
+ronty	4	98	
+sady	5	98	
+woony	6	23	
+enne	7	100	

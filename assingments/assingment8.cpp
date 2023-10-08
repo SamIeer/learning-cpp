@@ -63,9 +63,6 @@ int main() {
 
 
 
-
-
-
 //ASSINGMENT QUESTION : FINDING THE ROOTS OF QUARDIC EQUATION AND HANDLING THE ERROR WHEN A=0
     int find_roots(int a,int b,int c){
         int d=(b*b)-(4*a*c);

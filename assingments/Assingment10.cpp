@@ -1,45 +1,56 @@
 #include <iostream>
 #include <cstring>
-
-// Function to find starting locations of a substring in a string
+using namespace std;
+//Answer 1:
 void findSubstring(const char* str, const char* sub) {
     int strLength = strlen(str);
     int subLength = strlen(sub);
-
     if (subLength > strLength) {
-        std::cout << "Substring not found in the given string." << std::endl;
+        cout << "Substring not found in the given string." << std::endl;
         return;
     }
-
     const char* ptr = str;
     const char* subPtr;
-
     while (*ptr) {
         subPtr = sub;
         const char* tempPtr = ptr;
-
         while (*tempPtr == *subPtr && *tempPtr && *subPtr) {
             tempPtr++;
             subPtr++;
         }
-
         if (*subPtr == '\0') {
             // Substring found, print the starting location
-            std::cout << "Substring found at position: " << (ptr - str) + 1 << std::endl;
+            cout << "Substring found at position: " << (ptr - str) + 1 << std::endl;
         }
-
-        ptr++;
-    }
+        ptr++;}
 }
-
 int main() {
     const char* mainString = "ababcababcabc";
     const char* substring = "abc";
-
-    std::cout << "Finding substring '" << substring << "' in string '" << mainString << "':" << std::endl;
+    cout << "Finding substring '" << substring << "' in string '" << mainString << "':" << std::endl;
     findSubstring(mainString, substring);
-
     return 0;
 }
 
-//Question 2:
+
+#include <list>
+//Answer 2:
+void printList(const list<int>& linkedList) {
+    for (const auto& element : linkedList) {
+        cout << element << " ";
+    }
+    cout << endl;
+}
+
+int main() {
+    list<int> linkedList;
+
+    linkedList.push_back(10);
+    linkedList.push_back(20);
+    linkedList.push_back(30);
+    linkedList.push_back(40);
+
+    cout << "Initial Linked List: ";
+    printList(linkedList);
+    return 0;
+}
